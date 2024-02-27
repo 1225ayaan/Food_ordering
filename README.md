@@ -12,8 +12,8 @@ In conclusion, food ordering systems have become an integral part of the modern 
 ## Microsoft-Future-Ready-Talent-Virtual-Internship-Project
 ## Project Title: Food_ordering system
 ## Project Details :
-## Project Demo URL : https://opportunityjunction.azurewebsites.net/
-## Demo Video URL : https://drive.google.com/file/d/1kzyy5PcoUC7FJyR06LWzZHgeQaRrAsvD/view?usp=sharing
+## Project Demo URL : foodordering0431.azurewebsites.net
+## Demo Video URL : 
 ## Github Repository URL : https://github.com/1225ayaan/Food_ordering
 ## Industry : Lifestyle
 ## Azure Services Used :-
