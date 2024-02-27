@@ -136,7 +136,7 @@ foreach ($query as $key => $value) {
 
     <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2024 - Ayaan Jahagirdar | <a href="https://www.sourcecodester.com/" target="_blank">Sourcecodester</a></div>
+            <div class="small text-center text-muted">Copyright © 2024 - Ayaan Jahagirdar </div>
         </div>
     </footer>
 
