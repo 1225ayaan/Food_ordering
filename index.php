@@ -38,6 +38,8 @@
         <div class="toast-body text-white">
         </div>
       </div>
+
+	    <iframe src="https://webchat.botframework.com/embed/foodordering-bot?s=uqYhrL3nyOg.Y85X_06gLITwGAg1o2JJNd9TWcCdwqUdtwTrf1p-W8E" style="height: 502px; max-height: 502px;"></iframe>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_name'] ?></a>
