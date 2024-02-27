@@ -1,4 +1,4 @@
-# Food Ordering System:
+# Food Ordering System :
 In our fast-paced world, the way we order and consume food has evolved significantly. Traditional methods of dining out or calling in orders have been increasingly replaced by online food ordering systems. These systems offer a convenient and efficient way for customers to browse menus, place orders, and have food delivered to their doorstep or ready for pickup.
 
 A food ordering system typically consists of an online platform or mobile application that connects customers with restaurants or food establishments. It provides users with a digital menu, allowing them to explore various dishes, customize their orders, and make secure payments. Simultaneously, it enables restaurants to manage their menu, process orders, and track deliveries efficiently.
