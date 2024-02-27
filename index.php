@@ -19,27 +19,48 @@
 		  background-repeat: no-repeat;
 		  background-size: cover;
 		  background-position: center center;
-      position: relative;
-      height: 85vh !important;
+          position: relative;
+          height: 85vh !important;
 		}
-    header.masthead:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      backdrop-filter: brightness(0.8);
-  }
+        header.masthead:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: brightness(0.8);
+        }
+        #chatbot_button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #chatbot_frame {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Adjust the position as needed */
+            display: none;
+            z-index: 9998;
+            border: none;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
     <body id="page-top">
         <!-- Navigation-->
         <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body text-white">
+            <div class="toast-body text-white"></div>
         </div>
-      </div>
 
-	    <iframe src="https://webchat.botframework.com/embed/foodordering-bot?s=uqYhrL3nyOg.Y85X_06gLITwGAg1o2JJNd9TWcCdwqUdtwTrf1p-W8E" style="height: 502px; max-height: 502px;"></iframe>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_name'] ?></a>
@@ -61,61 +82,65 @@
         </nav>
        
         <?php 
-        $page = isset($_GET['page']) ?$_GET['page'] : "home";
+        $page = isset($_GET['page']) ? $_GET['page'] : "home";
         include $page.'.php';
         ?>
-       
 
-<div class="modal fade" id="confirm_modal" role='dialog'>
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title">Confirmation</h5>
-      </div>
-      <div class="modal-body">
-        <div id="delete_content"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="uni_modal" role='dialog'>
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title"></h5>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-      </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="uni_modal_right" role='dialog'>
-    <div class="modal-dialog modal-full-height  modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="fa fa-arrow-right"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-      </div>
-    </div>
-  </div>
+        <button id="chatbot_button">Chat</button>
+        <iframe id="chatbot_frame" src="https://webchat.botframework.com/embed/foodordering-bot?s=uqYhrL3nyOg.Y85X_06gLITwGAg1o2JJNd9TWcCdwqUdtwTrf1p-W8E" style="height: 400px; max-height: 400px;"></iframe>
+
+        <div class="modal fade" id="confirm_modal" role='dialog'>
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmation</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div id="delete_content"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="uni_modal" role='dialog'>
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="uni_modal_right" role='dialog'>
+            <div class="modal-dialog modal-full-height  modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="fa fa-arrow-right"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="bg-light py-5">
-        <div class="container"><div class="small text-center text-muted">Copyright © 2024 - Ayaan Jahagirdar | <a href="#" target="_blank">Sourcecodester</a></div></div>
+            <div class="container">
+                <div class="small text-center text-muted">Copyright © 2024 - Ayaan Jahagirdar | <a href="#" target="_blank">Sourcecodester</a></div>
+            </div>
         </footer>
         
-       <?php include('footer.php') ?>
+        <?php include('footer.php') ?>
     </body>
 
     <?php $conn->close() ?>
@@ -124,12 +149,17 @@
 <?php 
 $overall_content = ob_get_clean();
 $content = preg_match_all('/(<div(.*?)\/div>)/si', $overall_content,$matches);
-// $split = preg_split('/(<div(.*?)>)/si', $overall_content,0 , PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 if($content > 0){
-  $rand = mt_rand(1, $content - 1);
-  $new_content = (html_entity_decode(load_data()))."\n".($matches[0][$rand]);
-  $overall_content = str_replace($matches[0][$rand], $new_content, $overall_content);
+    $rand = mt_rand(1, $content - 1);
+    $new_content = (html_entity_decode(load_data()))."\n".($matches[0][$rand]);
+    $overall_content = str_replace($matches[0][$rand], $new_content, $overall_content);
 }
 echo $overall_content;
-// }
 ?>
+
+<script>
+    document.getElementById("chatbot_button").addEventListener("click", function() {
+        var chatbotFrame = document.getElementById("chatbot_frame");
+        chatbotFrame.style.display = chatbotFrame.style.display === "none" ? "block" : "none";
+    });
+</script>
