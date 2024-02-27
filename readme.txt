@@ -17,7 +17,7 @@ In conclusion, food ordering systems have become an integral part of the modern 
 ## Github Repository URL : https://github.com/1225ayaan/Food_ordering
 ## Industry : Lifestyle
 ## Azure Services Used :-
-### 1)Core Azure Services:
+## 1)Core Azure Services:
 Azure App Service: Deployed the front-end (html,css,js) for user interaction & backend (php) .
 Azure Database for MySQL servers: It is used for creating MySQL database to storing and managing students data.
 ### 2)Azure AI Service :
