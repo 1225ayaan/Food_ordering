@@ -13,7 +13,7 @@ In conclusion, food ordering systems have become an integral part of the modern 
 ## Project Title: Food_ordering system
 ## Project Details :
 ## Project Demo URL : https://foodordering0431.azurewebsites.net/
-## Demo Video URL : https://drive.google.com/file/d/1MjEyDhUCtdZ_cQ5-gvvLKELNM5VqvpuR/view?usp=drive_link
+## Demo Video URL : https://drive.google.com/file/d/1HDlKmfmF5fkyiI_iyrvDyXquUIx-9MiF/view?usp=sharing
 ## Github Repository URL : https://github.com/1225ayaan/Food_ordering
 ## Industry : Lifestyle
 ## Azure Services Used :-
